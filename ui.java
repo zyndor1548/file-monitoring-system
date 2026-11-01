@@ -4,6 +4,7 @@ import javax.swing.table.DefaultTableModel;
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.awt.Color;
+import java.awt.Font;
 
 import java.io.File;
 
@@ -45,6 +46,10 @@ public class ui {
 			}
 		};
 		JTable table = new JTable(eventmodel);
+		table.setRowHeight(0, 45);
+		table.setRowHeight(35);
+		table.getTableHeader().setFont(new Font("Arial", Font.BOLD, 17));
+		table.setFont(new Font("Arial", Font.PLAIN, 16));
 		table.setAutoResizeMode(JTable.AUTO_RESIZE_ALL_COLUMNS);
 		JScrollPane scrollPane = new JScrollPane(table);
 		panel.add(scrollPane, BorderLayout.CENTER);
